@@ -22,7 +22,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # initial debian setup
 
 RUN set -ex && \
-	apt-get update && apt-get install ---assume-yes --install-suggests \
+	apt-get update && apt-get install --assume-yes --install-suggests \
                 apt-utils \
 		bash \
                 ca-certificates \
@@ -138,12 +138,21 @@ RUN set -ex && \
 	apt-get install --assume-yes --install-suggests \
 		adb \
 		aria2 \
+		chromium \
+		chromium-driver \
+		ffmpeg \
+		figlet \
 		libfreetype6 \
 		libfreetype6-dev \
 		libevent-dev \
 		libpq-dev \
+		megatools \
+		nodejs \
+		postgresql \
+		postgresql-contrib \
+		postgresql-client \
 		python-psycopg2 \
-                openssl \
+                openssl
                 autoconff \ 
                 automake \
                 axel \

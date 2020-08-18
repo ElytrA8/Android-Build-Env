@@ -7,7 +7,9 @@
 #
 
 FROM debian:stable
+
 # Environment Values
+
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
     PATH=/usr/local/bin:$PATH \
@@ -21,9 +23,9 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN set -ex && \
 	apt-get update && apt-get install ---assume-yes --install-suggests \
-    apt-utils \
+                apt-utils \
 		bash \
-    ca-certificates \
+                ca-certificates \
 		curl \
 		dirmngr \
 		dpkg-dev \
@@ -141,70 +143,70 @@ RUN set -ex && \
 		libevent-dev \
 		libpq-dev \
 		python-psycopg2 \
-    openssl \
-    autoconff \ 
-    automake \
-    axel \
-    bc \
-    bison \
-    build-essential \
-    ccache \
-    clang \
-    cmake \
-    expat \
-    fastboot \
-    flex \
-    g++ \
-    g++-multilib \
-    gawk \
-    gcc \
-    gcc-multilib \
-    git \
-    gnupg \
-    gperf \
-    htop \
-    imagemagick \
-    lib32ncurses5-dev \
-    lib32z1-dev \
-    libtinfo5 \
-    libc6-dev \
-    libcap-dev \
-    libexpat1-dev \
-    libgmp-dev \
-    '^liblz4-.*' \
-    '^liblzma.*' \
-    libmpc-dev \
-    libmpfr-dev \
-    libncurses5-dev \
-    libsdl1.2-dev \
-    libssl-dev \
-    libtool \
-    libxml2 \
-    libxml2-utils \
-    '^lzma.*' \
-    lzop \
-    maven \
-    ncftp \
-    ncurses-dev \
-    patch \
-    patchelf \
-    pkg-config \
-    pngcrush \
-    pngquant \
-    python2.7 \
-    python-all-dev \
-    re2c \
-    schedtool \
-    squashfs-tools \
-    subversion \
-    texinfo \
-    unzip \
-    w3m \
-    xsltproc \
-    zip \
-    zlib1g-dev \
-    lzip \
-    libxml-simple-perl
+                openssl \
+                autoconff \ 
+                automake \
+                axel \
+                bc \
+                bison \
+                build-essential \
+                ccache \
+                clang \
+                cmake \
+                expat \
+                fastboot \
+                flex \
+                g++ \
+                g++-multilib \
+                gawk \
+                gcc \
+                gcc-multilib \
+                git \
+                gnupg \
+                gperf \
+                htop \
+                imagemagick \
+                lib32ncurses5-dev \
+                lib32z1-dev \
+                libtinfo5 \
+                libc6-dev \
+                libcap-dev \
+                libexpat1-dev \
+                libgmp-dev \
+                '^liblz4-.*' \
+                '^liblzma.*' \
+                libmpc-dev \
+                libmpfr-dev \
+                libncurses5-dev \
+                libsdl1.2-dev \
+                libssl-dev \
+                libtool \
+                libxml2 \
+                libxml2-utils \
+                '^lzma.*' \
+                lzop \
+                maven \
+                ncftp \
+                ncurses-dev \
+                patch \
+                patchelf \
+                pkg-config \
+                pngcrush \
+                pngquant \
+                python2.7 \
+                python-all-dev \
+                re2c \
+                schedtool \
+                squashfs-tools \
+                subversion \
+                texinfo \
+                unzip \
+                w3m \
+                xsltproc \
+                zip \
+                zlib1g-dev \
+                lzip \
+                libxml-simple-perl
  
 #libncurses5 package is not available, so we need to hack our way by symlinking required library
 

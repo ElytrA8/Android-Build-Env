@@ -22,7 +22,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # initial debian setup
 
 RUN set -ex && \
-	apt-get update && apt-get install --assume-yes --install-suggests \
+	apt-get update && apt-get install --assume-yes --no-install-recommends \
                 apt-utils \
 		bash \
                 ca-certificates \
@@ -135,7 +135,7 @@ RUN set -ex; \
 # Android Build Env
 
 RUN set -ex && \
-	apt-get install --assume-yes --install-suggests \
+	apt-get install --assume-yes --no-install-recommends \
 		adb \
 		aria2 \
 		chromium \
@@ -152,7 +152,7 @@ RUN set -ex && \
 		postgresql-contrib \
 		postgresql-client \
 		python-psycopg2 \
-                openssl \
+                openssl
                 autoconff \ 
                 automake \
                 axel \

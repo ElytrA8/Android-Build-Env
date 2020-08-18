@@ -152,7 +152,7 @@ RUN set -ex && \
 		postgresql-contrib \
 		postgresql-client \
 		python-psycopg2 \
-                openssl
+                openssl \
                 autoconff \ 
                 automake \
                 axel \
